@@ -1,4 +1,4 @@
-###Reference
+### Reference
 - https://www.edureka.co/blog/install-kubernetes-on-ubuntu#SetupKubernetesEnvironment
 - https://joshh.info/2018/kubernetes-dashboard-https-nodeport/
 
@@ -6,7 +6,7 @@ This tutorial is applied on VirtualBox, running Ubuntu server 16.04 on a NAT net
 
 kubectl apply -f https://docs.projectcalico.org/v3.7/manifests/calico.yaml
 
-###Prepare steps on VMs (master + slave)
+### Prepare steps on VMs (master + slave)
 **Pre-requisites To Install Kubernetes**
 
 Since we are dealing with VMs, we recommend the following settings for the VMs:-
@@ -51,7 +51,7 @@ $ apt update
 4 apt-get install -y kubelet kubeadm kubectl
 ```
 
-###Install KMaster
+### Install KMaster
 Now it's time to init the master:
 ```
 kubeadm init --apiserver-advertise-address=10.10.21.135 --pod-network-cidr=192.168.0.0/16
@@ -115,7 +115,7 @@ Check on master: ```$ kubeadm get nodes```
 
 To reset kubeadm init or join: ```$ kubeadm reset```
 
-###OTHERS
+### OTHERS
 
    58  kubectl get pods -o wide --all-namespaces
    59  service kubelet status
