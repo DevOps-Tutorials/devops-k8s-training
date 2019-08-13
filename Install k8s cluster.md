@@ -66,12 +66,12 @@ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Check that pods are being started
 ```
-kubectl get pods -o wide --all-namespaces
+$ kubectl get pods -o wide --all-namespaces
 ```
 
 You will notice from the previous command, that all the pods are running except one: ‘kube-dns’. For resolving this we will install a pod network. To install the CALICO pod network, run the following command:
 ```
-kubectl apply -f https://docs.projectcalico.org/v3.7/manifests/calico.yaml
+$ kubectl apply -f https://docs.projectcalico.org/v3.7/manifests/calico.yaml
 ```
 
 Now all pods should be in running state.
@@ -124,3 +124,5 @@ To reset kubeadm init or join: ```$ kubeadm reset```
    46  echo "source <(kubectl completion bash)" >> ~/.bashrc
    49  alias k=kubectl
    54  complete -F __start_kubectl k
+   
+   kubectl describe pods/kube-trainning-demo-pod -n kube-trainning
