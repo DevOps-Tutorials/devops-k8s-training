@@ -81,6 +81,7 @@ It's time to install a dashboard
 $ curl https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml -O
 $ kubectl apply -f kubernetes-dashboard.yaml
 ```
+(or a newer version: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta1/aio/deploy/recommended.yaml)
 
 Edit dashboard service to change: spec.type from ClusterIP to NodePort, spec.ports[0].nodePort from 32641 to whatever port you want it to be exposed on
 ```
