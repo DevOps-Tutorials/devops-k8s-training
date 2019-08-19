@@ -116,13 +116,14 @@ Check on master: ```$ kubeadm get nodes```
 To reset kubeadm init or join: ```$ kubeadm reset```
 
 ### OTHERS
-
-   58  kubectl get pods -o wide --all-namespaces
-   59  service kubelet status
+```
+kubectl get pods -o wide --all-namespaces
+service kubelet status
 
    45  source <(kubectl completion bash)
    46  echo "source <(kubectl completion bash)" >> ~/.bashrc
    49  alias k=kubectl
    54  complete -F __start_kubectl k
    
-   kubectl describe pods/kube-trainning-demo-pod -n kube-trainning
+kubectl describe pods/kube-trainning-demo-pod -n kube-trainning
+```
